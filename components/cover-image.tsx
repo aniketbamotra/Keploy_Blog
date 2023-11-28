@@ -9,10 +9,13 @@ interface Props {
       sourceUrl: string
     }
   }
-  slug?: string
+  slug?: string;
+  isCommunity?: boolean;
 }
 
-export default function CoverImage({ title, coverImage, slug }: Props) {
+export default function CoverImage({ title, coverImage, slug, isCommunity }: Props) {
+  const basePath = isCommunity ? '/community/' : '/technology/';
+
   const image = (
     <Image
       width={2000}
@@ -27,7 +30,7 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
   return (
     <div className="sm:mx-0">
       {slug ? (
-        <Link href={`/posts/${slug}`} aria-label={title}>
+        <Link href={`${basePath}${slug}`} aria-label={title}>
           {image}
         </Link>
       ) : (

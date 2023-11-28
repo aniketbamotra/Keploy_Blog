@@ -127,3 +127,22 @@ body{
   background-size: 0 10px;
   transition: background .3s ease;
 } */
+
+.spin-anim{
+  animation: 5s linear infinite spin;
+}
+@keyframes spin {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+
+pre {
+  background-color: #222222 !important;
+  color: antiquewhite;
+  text-wrap: wrap;
+}

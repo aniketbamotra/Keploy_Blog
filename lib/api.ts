@@ -80,6 +80,7 @@ export async function getAllPostsForHome(preview) {
                 name
               }
             }
+            ppmaAuthorName
             categories {
               edges {
                 node {
@@ -132,6 +133,7 @@ export async function getAllPostsForTechnology(preview) {
                 }
               }
             }
+            ppmaAuthorName
             categories {
               edges {
                 node {
